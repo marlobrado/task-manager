@@ -1,11 +1,9 @@
-import Tasks from './components/Tasks';
+import Header from './components/Header';
 
 const App = () => {
-    // Adicionei aspas duplas e ponto e vírgula para testar o Prettier.
-    // Ao salvar, eles devem ser corrigidos para aspas simples e sem ponto e vírgula.
     return (
         <>
-            <Tasks />
+            <Header>Olá</Header>
         </>
     );
 };
