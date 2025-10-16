@@ -8,31 +8,28 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
-        'plugin:react-hooks/recommended', // Adiciona as regras recomendadas para hooks
-        'prettier', // Adiciona o Prettier. DEVE SER O ÚLTIMO!
+        'plugin:react-hooks/recommended',
+        'prettier',
     ],
-    ignorePatterns: [
-        'dist',
-        '.eslintrc.cjs',
-    ],
+    ignorePatterns: ['dist', '.eslintrc.cjs'],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
     settings: {
-        react: { version: '18.2' },
+        react: {
+            version: '18.2',
+        },
     },
     plugins: ['react-refresh'],
     rules: {
-        'react/jsx-no-target-blank':
-            'off',
+        'react/jsx-no-target-blank': 'off',
         'react/prop-types': 'off',
-        'react-refresh/only-export-components':
-            [
-                'warn',
-                {
-                    allowConstantExport: true,
-                },
-            ],
+        'react-refresh/only-export-components': [
+            'warn',
+            {
+                allowConstantExport: true,
+            },
+        ],
     },
 };
