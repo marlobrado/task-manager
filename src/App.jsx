@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Tasks from './components/Tasks';
+import './index.css';
 
 const App = () => {
     const teste = 'teste';
