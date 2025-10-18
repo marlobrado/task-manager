@@ -1,4 +1,3 @@
-import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Tasks from './components/Tasks';
 import './index.css';
@@ -7,11 +6,11 @@ const App = () => {
     const teste = 'teste';
     console.log(teste);
     return (
-        <>
+        <div className="flex gap-9">
             <Sidebar />
-            <Header>Olá</Header>
+
             <Tasks />
-        </>
+        </div>
     );
 };
 

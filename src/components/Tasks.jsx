@@ -1,42 +1,30 @@
-import { useState } from 'react';
-import Header from './Header';
+import Button from './Button';
+import AddIcon from '../assets/icons/add.svg?react';
+import TrashIcon from '../assets/icons/trash.svg?react';
 
 const Tasks = () => {
-    const [inputValue, setInputValue] = useState('Teste');
-    const [messages, setMessages] = useState([
-        'hello world',
-        'FSC is the best course in the world',
-    ]);
-
-    const handleButtonClick = () => {
-        setMessages([...messages, inputValue]);
-    };
     return (
-        <div>
-            <Header>
-                <h1 className="mt-2 bg-red-500 p-6">Add a Task</h1>
-            </Header>
-            <h1 className=""></h1>
-            <input
-                type="text"
-                className="input"
-                placeholder="Create your task..."
-                value={inputValue}
-                onChange={(e) => {
-                    setInputValue(e.target.value);
-                }}
-            />
-            <button className="button" onClick={handleButtonClick}>
-                Add Task
-            </button>
-            <div>
-                <ul>
-                    {messages.map((message, index) => {
-                        return <li key={index}>{message}</li>;
-                    })}
-                </ul>
+        <div className="w-full px-9 py-16">
+            <div className="flex justify-between">
+                <div>
+                    <span className="text-xs font-semibold text-[#00AD85]">
+                        Minhas Tarefas
+                    </span>
+                    <h1 className="text-xl font-semibold">
+                        Minhas Tarefas
+                    </h1>
+                </div>
+                <div className="flex items-center gap-3">
+                    <Button>
+                        Nova Tarefa <TrashIcon />
+                    </Button>
+                    <Button variant="primary">
+                        Limpar Tarefa <AddIcon />
+                    </Button>
+                </div>
             </div>
         </div>
     );
 };
+
 export default Tasks;
