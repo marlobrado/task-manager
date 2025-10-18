@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 import Tasks from './components/Tasks';
 import './index.css';
 
@@ -7,6 +8,7 @@ const App = () => {
     console.log(teste);
     return (
         <>
+            <Sidebar />
             <Header>Olá</Header>
             <Tasks />
         </>
